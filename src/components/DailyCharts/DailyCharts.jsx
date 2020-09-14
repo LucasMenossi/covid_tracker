@@ -45,6 +45,15 @@ const DailyCharts = ({ data: { daily }, country }) => {
                         legend: {
                             display: false
                         },
+                        scales : {
+                            yAxes: [{
+                                ticks: {
+                                    callback: function(value, index, values) {
+                                        return value.toLocaleString()
+                                    }
+                                }
+                            }]
+                        },
                     }}
                 />
                 ) : null
